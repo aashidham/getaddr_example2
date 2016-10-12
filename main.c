@@ -86,7 +86,7 @@ void* main2(void* p)
 
     /* resolve the domain name into a list of addresses */
     fprintf(stdout,"before getaddrinfo\n");
-    error = getaddrinfo("www.benuku2.com", NULL, &hints, &result);
+    error = getaddrinfo("www.google.com", NULL, &hints, &result);
     fprintf(stdout,"after getaddrinfo\n");
     if (error != 0 ) {   
         if (error == EAI_SYSTEM) {
