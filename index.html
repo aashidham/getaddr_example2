@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Actually pnacl</title>
+
+	  <script type="text/javascript">
+		HelloTutorialModule = null;
+		function moduleDidLoad() {
+			console.log("module loaded");
+			HelloTutorialModule = document.getElementById('hello_tutorial');
+		}
+	  </script>
+
+    </head>
+    <body>
+	<div id="listener">
+	<script type="text/javascript">
+		var listener = document.getElementById('listener');
+		listener.addEventListener('load', moduleDidLoad, true);
+	</script>
+        <embed
+            width="200" height="200"
+            src="a.nmf"
+            type="application/x-pnacl"
+	    id="hello_tutorial"
+        ></embed>
+	</div>
+    </body>
+</html>
